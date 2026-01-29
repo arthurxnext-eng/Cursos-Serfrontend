@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+/* ----- Área cinza em volta das caixas ----- */
+main {
+    background-color: #ccc;
+    padding: 40px 0;
+}
+
+/* ----- Caixas de conteúdo ----- */
+article {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 860px;
+    border-radius: 6px;
+}
+
+/* ----- Títulos das caixas ----- */
+article h2 {
+    border-bottom: 2px solid #ccc;
+    background-color: #eee;
+    padding: 18px;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* ----- Parágrafos ----- */
+p {
+    text-align: left;
+}
