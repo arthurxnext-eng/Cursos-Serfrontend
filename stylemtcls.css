@@ -1,0 +1,297 @@
+ :root {
+     --principal: #ffffff;
+     --fundo1: #47026e;
+     --fundo2: #471f88;
+     --fundo3: #39035e;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+
+ body {
+     background: linear-gradient(135deg, var(--fundo1), var(--fundo2), var(--fundo3));
+     color: #fff;
+     min-height: 100vh;
+ }
+
+ header {
+     text-align: center;
+     padding: 60px 20px;
+ }
+
+ header h1 {
+     font-size: clamp(2rem, 5vw, 3rem);
+     margin-bottom: 15px;
+ }
+
+ header p {
+     font-size: clamp(1rem, 3vw, 1.2rem);
+     opacity: 0.9;
+ }
+
+ main {
+     max-width: 1100px;
+     margin: auto;
+     padding: 20px;
+ }
+
+ section {
+     background: rgba(255, 255, 255, 0.08);
+     border-radius: 18px;
+     padding: 25px;
+     margin-bottom: 30px;
+ }
+
+ section h2 {
+     text-align: center;
+     margin-bottom: 20px;
+     color: var(--principal);
+     font-size: clamp(1.4rem, 4vw, 1.8rem);
+ }
+
+ ul {
+     list-style: none;
+     line-height: 2;
+     font-size: clamp(1rem, 3vw, 1.1rem);
+ }
+
+ ul li::before {
+     content: "✔ ";
+     color: var(--principal);
+ }
+
+ .cards {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+     gap: 20px;
+ }
+
+ .card {
+     background: rgba(0, 0, 0, 0.35);
+     padding: 22px;
+     border-radius: 15px;
+     text-align: center;
+ }
+
+ .card h3 {
+     color: var(--principal);
+     margin-bottom: 10px;
+ }
+
+ .cta {
+     text-align: center;
+ }
+
+ .cta p {
+     margin-bottom: 20px;
+ }
+
+ .cta a {
+     display: inline-block;
+     margin: 12px;
+     padding: 15px 35px;
+     border-radius: 40px;
+     text-decoration: none;
+     font-weight: bold;
+     color: #000;
+     background: var(--principal);
+ }
+
+/* .cta {
+    margin: 20px 60px 0 0;
+    padding: 0;
+    text-align: right;
+} */
+
+/* ----- Itens do menu ----- */
+.cta {
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+}
+
+/* ----- Links do menu ----- */
+.cta {
+    background: linear-gradient(145deg, #4c1d95, #7c3aed);
+    padding: 14px 18px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+}
+
+.cta :hover {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 12px 30px rgba(167,139,250,0.6);
+}
+
+
+ footer {
+     text-align: center;
+     padding: 25px 10px;
+     font-size: 0.9rem;
+     opacity: 0.8;
+     margin: 0 6px;
+ }
+
+footer {
+    margin-top: auto;
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+footer-icons {
+    margin-top: 10px;
+}
+
+footer-icons img {
+    margin: 0 6px;
+    transition: transform 0.3s;
+}
+
+footer-icons img:hover {
+    transform: scale(1.2);
+}
+
+
+/*----- outra parte -----*/
+ @media (max-width: 600px) {
+     header {
+         padding: 40px 15px;
+     }
+
+     .cta a {
+         width: 100%;
+         max-width: 280px;
+     }
+ }
+ 
+/* ===== RESPONSIVIDADE ======= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    .hero {
+        height: 520px;
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 90%;
+        margin-top: 60px;
+    }
+
+    main {
+        width: 94%;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+
+    /* Menu centralizado */
+    .hero nav ul {
+        text-align: center;
+        margin: 20px 0 0;
+    }
+
+    .hero nav li {
+        display: block;
+        margin: 12px 0;
+    }
+
+    .hero nav a {
+        display: inline-block;
+        width: 80%;
+        font-size: 13px;
+    }
+
+    /* Hero */
+    .hero {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    /* Artigos */
+    article {
+        padding: 16px;
+    }
+
+    article h2 {
+        font-size: 20px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 22px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero nav a {
+        padding: 12px;
+        font-size: 11px;
+    }
+
+    /* Octocat menor */
+    .octocat {
+        width: 120px;
+        height: 180px;
+    }
+
+    .head {
+        width: 120px;
+        height: 95px;
+    }
+
+    .eye.left {
+        left: 36px;
+    }
+
+    .eye.right {
+        right: 36px;
+    }
+
+    .body {
+        width: 78px;
+        height: 60px;
+    }
+
+    .arm {
+        height: 55px;
+    }
+
+    .speech-bubble p {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,259 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* fonte corporativa limpa */
+    background: linear-gradient(180deg, #0f0f1a, #1a1a2e, #24124d); /* dark roxo uniforme */
+    color: #e5e7eb; /* texto padrão claro */
+    line-height: 1.6;
+}
+
+/* ===== BOTÕES HERO ===== */
+.hero {
+      color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    border: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(91, 31, 166, 0.35);
+    text-decoration: none;
+    text-align: center;
+    text-transform: transparent;
+    background: #310350;
+    padding-bottom: 10px;
+}
+
+/* ===== ARTIGOS ===== */
+article {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+article:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow:
+        0 25px 60px rgba(96, 24, 221, 0.45),
+        0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== PARÁGRAFOS ===== */
+p {
+    text-align: center;
+    color: #ddd6fe; /* texto uniforme */
+    font-size: 16px;
+    line-height: 1.7;
+    animation: fadeText 0.8s ease forwards;
+    margin: 12px 0;
+}
+
+/* ===== TÍTULOS ===== */
+article h2 {
+    padding: 18px 5px 6px 5px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgba(118, 76, 245, 0.6); /* barra sutil */
+    background-color: transparent;
+}
+
+/* ===== CABEÇALHO / FOOTER ===== */
+.cabecalho {
+    border-top: 3px solid #4b019e;
+    text-align: center;
+    padding: 30px 10px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #0f0f1a, #1a1a2e);
+    color: #f7f7f7;
+}
+
+.cabecalho img {
+    margin: 0 6px;
+    vertical-align: middle;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.cabecalho img:hover {
+    transform: scale(1.4) rotate(8deg);
+    filter: drop-shadow(0 0 10px #39025e);
+}
+
+/* ===== CAIXAS DE TEXTO ===== */
+.box {
+    background: linear-gradient(160deg, #1a1a2e, #24124d);
+    border: 1px solid rgba(118, 76, 245, 0.3);
+    border-radius: 16px;
+    padding: 25px 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    color: #ddd6fe; /* texto uniforme */
+    font-size: 16px;
+    line-height: 1.7;
+    box-shadow: 0 10px 30px rgba(50, 0, 167, 0.25),
+                0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.box:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(96, 24, 221, 0.45),
+                0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.box h2 {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgba(118, 76, 245, 0.6);
+    padding-bottom: 6px;
+}
+
+.box p {
+    color: #ddd6fe;
+    margin: 12px 0;
+}
+
+.box a {
+    color: #9b59b6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.box a:hover {
+    color: #ffffff;
+}
+
+/* ===== RESPONSIVIDADE ======= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    .hero {
+        height: 520px;
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 90%;
+        margin-top: 60px;
+    }
+
+    main {
+        width: 94%;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+
+    /* Menu centralizado */
+    .hero nav ul {
+        text-align: center;
+        margin: 20px 0 0;
+    }
+
+    .hero nav li {
+        display: block;
+        margin: 12px 0;
+    }
+
+    .hero nav a {
+        display: inline-block;
+        width: 80%;
+        font-size: 13px;
+    }
+
+    /* Hero */
+    .hero {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    /* Artigos */
+    article {
+        padding: 16px;
+    }
+
+    article h2 {
+        font-size: 20px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 22px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero nav a {
+        padding: 12px;
+        font-size: 11px;
+    }
+
+    /* Octocat menor */
+    .octocat {
+        width: 120px;
+        height: 180px;
+    }
+
+    .head {
+        width: 120px;
+        height: 95px;
+    }
+
+    .eye.left {
+        left: 36px;
+    }
+
+    .eye.right {
+        right: 36px;
+    }
+
+    .body {
+        width: 78px;
+        height: 60px;
+    }
+
+    .arm {
+        height: 55px;
+    }
+
+    .speech-bubble p {
+        font-size: 13px;
+    }
+}
