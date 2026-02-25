@@ -1,0 +1,382 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+
+    background: radial-gradient(circle at top, #1a1a2e, #0f0f1a);
+    color: #e5e7eb;
+    transition: background 0.6s ease, color 0.6s ease;
+}
+  
+/* ===== BOTÃO PRINCIPAL ===== */
+.hero {
+    color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(91, 31, 166, 0.35);
+  text-decoration: none;
+  text-align: center;
+  text-transform: transparent;
+  background: #39025e;
+}
+
+/* Hover */
+.hero:hover {
+  box-shadow: 0 12px 28px rgba(153, 57, 209, 0.473);
+  transform: translateY(-2px);
+}
+
+/* Clique */
+.hero:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(91, 31, 166, 0.3);
+}
+
+/* Desabilitado */
+.hero:disabled {
+  background: #3a2f4f;
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+/* ===== BOTÃO OUTLINE ===== */
+.hero.outline {
+  background: transparent;
+  color: #5b1fa6;
+  border: 2px solid #5b1fa6;
+  box-shadow: none;
+}
+
+.hero.outline:hover {
+  background: #5b1fa6;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(91, 31, 166, 0.35);
+}
+
+/* ----- Área cinza em volta das caixas ----- */
+main {
+    background-color: #4c057c;
+    padding: 1px;
+    animation: fadeMain 1s ease forwards;
+
+}
+
+/* ----- Caixas de conteúdo ----- */
+article {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 860px;
+    border-radius: 20px;
+
+    background: linear-gradient(160deg, #1a1a2e, #141428);
+    border: 1px solid rgba(118, 76, 245, 0.322);
+    box-shadow:
+        0 10px 30px rgba(50, 0, 167, 0.281),
+        0 4px 12px rgba(0, 0, 0, 0.5);
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* animação ao passar o mouse */
+article:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow:
+        0 25px 60px rgba(96, 24, 221, 0.45),
+        0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ----- Títulos das caixas ----- */
+article h2 {
+    background-color: #eee;
+    padding: 18px;
+    margin-top: 0;
+    text-align: center;
+    border-radius: 14px 14px 10px 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+
+    background: linear-gradient(90deg, #33037c, #6400b6);
+    color: #ffffff;
+    border-radius: 6px 6px 0 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: inset 0 -3px 6px rgba(0,0,0,0.4);
+}
+
+/* ----- Parágrafos ----- */
+p {
+    text-align: left;
+
+    /* extras modernos dark */
+    color: #ddd6fe;
+    font-size: 16px;
+    line-height: 1.7;
+    animation: fadeText 0.8s ease forwards;
+}
+
+/*----- cabeçalho dos icones footer -----*/
+.cabecalho {
+    background: linear-gradient(90deg, #0f0f1a, #1a1a2e);
+    border-top: 3px solid #4b019e;
+    text-align: center;
+}
+
+/*----- configurações do footer -----*/
+.cabecalho {
+    background: linear-gradient(90deg, #0f0f1a, #1a1a2e);
+    color: rgb(247, 247, 247);
+    align-items: center;
+    padding: 30px 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeMain {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeText {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efeito hover nos ícones */
+/* footer img:hover, .cabecalho img:hover {
+    transform: scale(1.4) rotate(8deg);
+    filter: drop-shadow(0 0 10px #39025e);
+} */
+
+/* Links dentro do footer
+footer a, .cabecalho a {
+    color: #f7f7f7;
+    text-decoration: none;
+    margin: 5px;
+    transition: color 0.3s;
+} */
+
+/* footer a:hover, .cabecalho a:hover {
+    color: #9b59b6; /* muda para roxo ao passar o mouse */
+
+/* ===== RESPONSIVIDADE ======= */
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    .hero {
+        height: 520px;
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 90%;
+        margin-top: 60px;
+    }
+
+    main {
+        width: 94%;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+
+    /* Menu centralizado */
+    .hero nav ul {
+        text-align: center;
+        margin: 20px 0 0;
+    }
+
+    .hero nav li {
+        display: block;
+        margin: 12px 0;
+    }
+
+    .hero nav a {
+        display: inline-block;
+        width: 80%;
+        font-size: 13px;
+    }
+
+    /* Hero */
+    .hero {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    /* Artigos */
+    article {
+        padding: 16px;
+    }
+
+    article h2 {
+        font-size: 20px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 22px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero nav a {
+        padding: 12px;
+        font-size: 11px;
+    }
+
+    /* Octocat menor */
+    .octocat {
+        width: 120px;
+        height: 180px;
+    }
+
+    .head {
+        width: 120px;
+        height: 95px;
+    }
+
+    .eye.left {
+        left: 36px;
+    }
+
+    .eye.right {
+        right: 36px;
+    }
+
+    .body {
+        width: 78px;
+        height: 60px;
+    }
+
+    .arm {
+        height: 55px;
+    }
+
+    .speech-bubble p {
+        font-size: 13px;
+    }
+}
+
+/* ===== ADIÇÕES PARA RESPONSIVIDADE (SEM ALTERAR SEU CÓDIGO) ===== */
+
+/* Correção global para evitar quebra de layout */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Garantir que o main não ultrapasse a tela */
+main {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  article {
+    width: 95%;
+  }
+
+  footer, .cabecalho {
+    padding: 25px 15px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  article {
+    width: 95%;
+    padding: 15px;
+  }
+
+  article h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  footer img, .cabecalho img {
+    width: 28px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  article {
+    width: 98%;
+    margin: 15px auto;
+  }
+
+  article h2 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+  
+   footer img, .cabecalho img {
+    width: 28px;
+  }
+}
